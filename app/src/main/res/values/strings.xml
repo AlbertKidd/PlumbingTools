@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PlumbingTools</string>
+    <string name="plumbing_tools">给排水工具箱</string>
+    <string name="water_supply">给水</string>
+    <string name="drainage">排水</string>
+    <string name="hot_water_supply">热水</string>
+    <string name="fire_water_supply">消防</string>
+    <string name="air_defence_water_supply">人防</string>
+    <string name="other">其他</string>
+</resources>
