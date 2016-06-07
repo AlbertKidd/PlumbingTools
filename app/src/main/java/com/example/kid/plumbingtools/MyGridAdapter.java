@@ -39,7 +39,7 @@ public class MyGridAdapter extends BaseAdapter {
             convertView.setTag(viewHolder);
         }else
             viewHolder = (ViewHolder) convertView.getTag();
-        MainFunction mainFunction = MainFunction.getFuction(position + 1);
+        MainFunction mainFunction = MainFunction.getFuction(position);
         viewHolder.mGridItemImage.setImageResource(mainFunction.getFunctionImage());
         viewHolder.mGridItemText.setText(mainFunction.getFunctionName());
         return convertView;
