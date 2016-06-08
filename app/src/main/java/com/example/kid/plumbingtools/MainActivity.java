@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(MainActivity.this, FunctionActivity.class);
-                i.putExtra(FunctionActivity.FUNCTION_IDEX, String.valueOf(position));
+                i.putExtra(FunctionActivity.FUNCTION_INDEX, String.valueOf(position));
                 startActivity(i);
             }
         });

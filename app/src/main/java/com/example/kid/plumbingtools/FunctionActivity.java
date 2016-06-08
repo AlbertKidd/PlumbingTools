@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
  */
 public class FunctionActivity extends AppCompatActivity {
 
-    public final static String FUNCTION_IDEX = "functionIndex";
+    public final static String FUNCTION_INDEX = "functionIndex";
     @BindView(R.id.real_tab_content)
     FrameLayout mRealTabContent;
     @BindView(R.id.tab_host)
