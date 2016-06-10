@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/plumbing_tools"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/text_regular_primary_size"
             android:textColor="@color/white"
             android:drawableTop="@mipmap/ic_settings_applications_white_48dp"/>
     </FrameLayout>

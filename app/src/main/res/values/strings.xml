@@ -7,4 +7,18 @@
     <string name="fire_water_supply">消防</string>
     <string name="air_defence_water_supply">人防</string>
     <string name="other">其他</string>
+    
+    
+    <!--给水-管道计算-->
+    <string name="calculate_params">设计参数</string>
+    <string name="pipe_material">管材</string>
+    <string name="pipe_diameter">管径</string>
+    <string name="water_flux">流量</string>
+    <string name="pipe_length">管长</string>
+    <string name="calculated_result">计算结果</string>
+    <string name="flow_rate">流速</string>
+    <string name="unit_head_loss">单位水损</string>
+    <string name="head_loss">沿程水损</string>
+    <string name="m_m">m/m</string>
+    <string name="m">m</string>
 </resources>

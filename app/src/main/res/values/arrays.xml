@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="water_supply_arrays">
+        <item>管道计算</item>
+        <item>室内给水</item>
+        <item>管件当量</item>
+    </array>
+</resources>
