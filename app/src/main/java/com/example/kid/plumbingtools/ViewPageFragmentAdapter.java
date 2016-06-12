@@ -5,6 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 
@@ -30,24 +33,35 @@ public class ViewPageFragmentAdapter extends FragmentStatePagerAdapter{
     }
 
     public void addTab(String title, Class<?> clz){
-
+        ViewPagerInfo viewPagerInfo = new ViewPagerInfo(title, clz);
+        addFragment(viewPagerInfo);
     }
 
     private void addFragment(ViewPagerInfo info){
         if (info == null){
             return;
         }
-
+        View v = LayoutInflater.from(mContext).inflate(R.layout.base_viewpage_tag_item, null);
+        TextView title = (TextView) v.findViewById(R.id.viewpage_tag_item_text);
+        title.setText(info.title);
+        mTabs.add(info);
+        mTabStrip.notifyDataSetChanged();
+        notifyDataSetChanged();
     }
 
     @Override
     public Fragment getItem(int position) {
         ViewPagerInfo info = mTabs.get(position);
-        return Fragment.instantiate(mContext, info.clz.getSimpleName());
+        return Fragment.instantiate(mContext, info.clz.getName());
     }
 
     @Override
     public int getCount() {
         return mTabs.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position){
+        return mTabs.get(position).title;
     }
 }

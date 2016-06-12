@@ -19,6 +19,7 @@
     <string name="flow_rate">流速</string>
     <string name="unit_head_loss">单位水损</string>
     <string name="head_loss">沿程水损</string>
-    <string name="m_m">m/m</string>
+    <string name="m_per_m">m/m</string>
     <string name="m">m</string>
+    <string name="m_per_s">m/s</string>
 </resources>

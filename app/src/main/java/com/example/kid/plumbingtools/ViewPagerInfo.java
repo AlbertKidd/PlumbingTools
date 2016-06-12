@@ -6,11 +6,9 @@ package com.example.kid.plumbingtools;
 public class ViewPagerInfo {
     public String title;
     public Class<?> clz;
-    public int viewId;
 
-    public ViewPagerInfo(String title, Class<?> clz, int viewId){
+    public ViewPagerInfo(String title, Class<?> clz){
         this.title = title;
         this.clz = clz;
-        this.viewId = viewId;
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -10,21 +11,26 @@
         android:background="@color/colorPrimary">
         <TextView
             style="@style/text_base"
+            android:gravity="center"
+            android:minHeight="40dp"
             android:text="@string/calculate_params"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="40dp"
             android:gravity="center">
             <TextView
                 style="@style/text_base"
                 android:text="@string/pipe_material"/>
             <Spinner
+                android:id="@+id/pipe_material_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 style="@style/text_base"
                 android:text="@string/pipe_diameter"/>
             <Spinner
+                android:id="@+id/pipe_diameter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -32,19 +38,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="40dp"
             android:gravity="center">
             <TextView
                 style="@style/text_base"
                 android:text="@string/water_flux"/>
+            <EditText
+                style="@style/edit_text_50dp"/>
             <Spinner
+                android:id="@+id/flux_unit_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 style="@style/text_base"
                 android:text="@string/pipe_length"/>
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <EditText
+                style="@style/edit_text_50dp"/>
+            <TextView
+                style="@style/text_base"
+                android:text="@string/m"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -52,26 +64,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="vertical">
         <TextView
             style="@style/text_base"
+            android:gravity="center"
+            android:minHeight="40dp"
             android:text="@string/calculated_result"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="40dp"
             android:gravity="center">
             <TextView
                 style="@style/text_base"
                 android:text="@string/water_flux"/>
+            <EditText
+                style="@style/edit_text_50dp"/>
             <Spinner
+                android:id="@id/flux_unit_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 style="@style/text_base"
                 android:text="@string/flow_rate"/>
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <EditText
+                style="@style/edit_text_50dp"/>
+            <TextView
+                style="@style/text_base"
+                android:text="@string/m_per_s"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,11 +102,10 @@
                 style="@style/text_base"
                 android:text="@string/unit_head_loss"/>
             <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                style="@style/edit_text_50dp"/>
             <TextView
                 style="@style/text_base"
-                android:text="@string/m_m"/>
+                android:text="@string/m_per_m"/>
         </LinearLayout>
 
         <LinearLayout

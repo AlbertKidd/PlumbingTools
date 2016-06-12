@@ -15,14 +15,14 @@ import butterknife.ButterKnife;
 /**
  * Created by niuwa on 2016/6/7.
  */
-public class BaseViewPagerFragment extends Fragment {
+public abstract class BaseViewPagerFragment extends Fragment {
 
     @BindView(R.id.pager_tab_strip)
     PagerSlidingTabStrip mPagerTabStrip;
     @BindView(R.id.view_pager)
     ViewPager mViewPager;
 
-
+    ViewPageFragmentAdapter mAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,5 +34,9 @@ public class BaseViewPagerFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
 
+        mAdapter = new ViewPageFragmentAdapter(getChildFragmentManager(), mPagerTabStrip, mViewPager);
+        setupTabAdapter(mAdapter);
     }
+
+    public abstract void setupTabAdapter(ViewPageFragmentAdapter adapter);
 }
