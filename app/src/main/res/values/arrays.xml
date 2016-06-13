@@ -5,4 +5,15 @@
         <item>室内给水</item>
         <item>管件当量</item>
     </array>
+
+    <array name="drainage_arrays">
+        <item>排水管道</item>
+        <item>排水沟渠</item>
+        <item>室内排水</item>
+    </array>
+
+    <array name="hot_water_arrays">
+        <item>直饮水计算</item>
+        <item>耗热量计算</item>
+    </array>
 </resources>

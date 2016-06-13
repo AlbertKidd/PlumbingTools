@@ -1,5 +1,6 @@
 package com.example.kid.plumbingtools;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
@@ -45,5 +46,8 @@ public class FunctionActivity extends AppCompatActivity {
             tabSpec.setIndicator(functionName,functionImage);
             mTabHost.addTab(tabSpec, function.getClz(), null);
         }
+        Intent i = getIntent();
+        int positon = i.getIntExtra(FUNCTION_INDEX, 0);
+        mTabHost.setCurrentTab(positon);
     }
 }
